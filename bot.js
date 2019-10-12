@@ -8,7 +8,7 @@ var adminprefix = '!'
 
 client.on("message", message => {
     if (message.content.startsWith("$obc")) {
-                 if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+                 if (!message.member.hasPermission("SPEAK"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
   message.guild.members.filter(m => m.presence.status !== 'all').forEach(m => {
